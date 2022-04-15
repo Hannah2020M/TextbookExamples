@@ -18,11 +18,53 @@ instance of HelloWorld, which we create using the syntax new HelloWorld().
 As with built-in classes, classes that we create define their own types. 
 So the object hello is a variable of type HelloWorld.
 
+ Whenever you use this, it always refers to the object that the given code
+ is currently within. In other words, this will always be an instance of 
+the given class. Since it is not legal to create code outside of a class 
+in Java, this nearly always makes sense to use (there’s one exception, 
+that we’ll encounter soon).
+
+You are allowed to create local variables (variables declared within a 
+method) with the same name as a field of the given class. In this case, 
+in order to refer to the field, we must use this.
+
 
 ====   DETAILS ==++++++++++++++++++++++===================
 C:\Users\h19sl\Documents\2javaProjects\TextbookExamples
 D:\LessImp\1qLimisc\1aJAVA2022LClimisc\2022LCchLimisc\1ch10LimiscClsUTstInhrtPlymrInterfaceSpringContrlrsRuting\1ch5LimiscDttypCntrlFlwCollecClass\1chLCjava\1chJavaProjectDataTypes\ch1HiWorld
 C:\Users\h19sl\Documents\JAVA\LCjavaProj\LCjava2022exerc\1ch10ExerclsUTstInhrtPlymrInterfaceSpringContrlrsRuting\1ch5ExerdttypCntrlFlwCollecClass\Ch1ExerCURUsetup\LC1chCURU\ch1HiWorld
+
+
+...   3:50 PM 4/15/2022 ....=.....
+package TextbookExamples;
+import java.lang.String;
+import java.util.Scanner;
+public class HelloWorldRunner {
+    public static void main(String[] args) {
+        Scanner userInput = new Scanner(System.in);
+        System.out.print("Enter your message: ");
+        String userMessage = userInput.nextLine();
+        HelloWorldClass hello = new HelloWorldClass();
+        hello.sayHello(userMessage);
+    }
+}
+...  two or more files ....-..........................
+package TextbookExamples;
+import java.util.Scanner;
+
+public class HelloWorldClass {
+    public String message = "Hello World";
+    public void sayHello(String userMessage) {
+         System.out.println(userMessage);
+        System.out.println(this.message);
+    }
+}
+OUTPUT
+Enter your message: TOday is good friday
+TOday is good friday
+Hello World
+
+Process finished with exit code 0
 
 
 ..   10:30 AM 4/15/2022 ...=............................
