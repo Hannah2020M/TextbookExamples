@@ -1,0 +1,174 @@
+JavaHintsch4Classes
+stored in E:\techRGBL621dec\TechnHints\hintsJava\2022JavaHintsLC\JavaHintCh
+C:\Users\h19sl\Documents\2javaProjects\TextbookExamples\ExtraFilesTextbookExamples
+9:24 AM 4/15/2022
+
+ROughWOrk 
+8:46 PM 4/14/2022
+C:\Users\h19sl\Documents\2javaProjects\java-practice\Ch1setupJava\out\production\Ch1setupJava\lecturesQuestions
+
+Classes may contain fields and methods. Fields contain our data for the class 
+and methods define actions a class can take. We say that fields and methods 
+are members of a class.
+
+
+In order to call the sayHello method of HelloWorld, we must first have an 
+instance of HelloWorld, which we create using the syntax new HelloWorld(). 
+//HelloWorld class is not a static class ??!!
+As with built-in classes, classes that we create define their own types. 
+So the object hello is a variable of type HelloWorld.
+
+
+====   DETAILS ==++++++++++++++++++++++===================
+C:\Users\h19sl\Documents\2javaProjects\TextbookExamples
+D:\LessImp\1qLimisc\1aJAVA2022LClimisc\2022LCchLimisc\1ch10LimiscClsUTstInhrtPlymrInterfaceSpringContrlrsRuting\1ch5LimiscDttypCntrlFlwCollecClass\1chLCjava\1chJavaProjectDataTypes\ch1HiWorld
+C:\Users\h19sl\Documents\JAVA\LCjavaProj\LCjava2022exerc\1ch10ExerclsUTstInhrtPlymrInterfaceSpringContrlrsRuting\1ch5ExerdttypCntrlFlwCollecClass\Ch1ExerCURUsetup\LC1chCURU\ch1HiWorld
+
+
+..   10:30 AM 4/15/2022 ...=............................
+package TextbookExamples;
+import java.lang.String;
+import java.util.Scanner;
+public class HelloWorldRunner {
+    public static void main(String[] args) {
+        Scanner userInput = new Scanner(System.in);
+        System.out.print("Enter your message: ");
+        String userMessage = userInput.nextLine();
+        HelloWorldClass hello = new HelloWorldClass();
+        hello.sayHello(userMessage);
+    }
+}
+.....  two or more files HelloWOrldClass-....................
+package TextbookExamples;
+import java.util.Scanner;
+public class HelloWorldClass {
+    public void sayHello(String userMessage) {
+         System.out.println(userMessage);
+    }
+}
+OUTPUT
+Enter your message: Hello Hannah
+Hello Hannah
+
+Process finished with exit code 0
+
+
+... 10:22 AM 4/15/2022   ....=....
+package TextbookExamples;
+import java.lang.String;
+import java.util.Scanner;
+public class HelloWorldRunner {
+    public static void main(String[] args) {
+        Scanner userInput = new Scanner(System.in);
+        System.out.print("Enter your message: ");
+        String userMessage = userInput.nextLine();
+        HelloWorldClass hello = new HelloWorldClass();
+        String message = userMessage;
+        hello.sayHello();
+    }
+}
+... two or more files HelloWOrldClass -.........................
+package TextbookExamples;
+
+public class HelloWorldClass {
+
+    public String message = "Hello World";
+
+    public void sayHello() {
+        System.out.println(message);
+    }
+}
+OUTPUT
+Enter your message: Hi on Good Friday 2022
+Hello World
+
+Process finished with exit code 0
+
+==  10:11 AM 4/15/2022 ==++++++++++++++++=============
+package TextbookExamples;
+import java.lang.String;
+import java.util.Scanner;
+public class HelloWorldRunner {
+    public static void main(String[] args) {
+        Scanner userInput = new Scanner(System.in);
+        System.out.print("Enter your message: ");
+        String userMessage = userInput.nextLine();
+        HelloWorldClass hello = new HelloWorldClass();
+        hello.sayHello();
+    }
+}
+
+.... two or more files used for methods HelloWorldClass.java ....-.........
+package TextbookExamples;
+
+public class HelloWorldClass {
+
+    public String message = "Hello World";
+
+    public void sayHello() {
+        System.out.println(message);
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\lib\idea_rt.jar=56330:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\h19sl\Documents\2javaProjects\out\production\2javaProjects TextbookExamples.HelloWorldRunner
+Enter your message: Hi on Good Friday 2022
+Hello World
+
+Process finished with exit code 0
+
+....    8:46 PM 4/14/2022   ....=.................................
+package lecturesQuestions;
+
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.lang.String
+
+public class ArrayLecture2apr14thu2022 {
+    public static void main(String[] args) {
+        //8:46 PM 4/14/2022
+        int total = 0;
+        String word = "Hello HannaH";
+
+        for (int i = 0; i < word.length(); i++) {
+            Character holder = word.charAt(i);
+            if (holder.equals('H')) {
+                total++;
+            }
+        }
+        System.out.println(total);
+    }
+}
+
+
+////    int[] arr = new int[10];
+////    System.out.println.Arrays.toString(arr);
+////        ArrayList<Integer> evenSum = new ArrayList<Integer>();
+////        evenSum.add(3);
+////        evenSum.add(54);
+////        ArrayList<Integer> arrList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+////        System.out.println(ArrayPractice.findSum(arrList));
+////        HashMap<String, Double> students = new HashMap<>();
+////        Scanner input = new Scanner(System.in);
+////        String newStudent;
+//
+//        //ArrayList<String> strList = new ArrayList<>(Arrays.asList("James", "Sara", "Tommy", "Bob"));
+//
+//
+//
+//        map.put("firstName","Emma");
+//        for (String key: map.keySet()){
+//            System.out.println("key: "+key);
+//            System.out.println("value: "+ map.get(key));
+//            System.out.println(key + " : "+map.get(key));
+//
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\lib\idea_rt.jar=56246:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\h19sl\Documents\2javaProjects\out\production\2javaProjects lecturesQuestions.ArrayLecture2apr14thu2022
+3
+
+Process finished with exit code 0
+--------------------------------=--------------------------
+
+
+===================++++++++++++++++++====================
+
+
